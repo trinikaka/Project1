@@ -9,7 +9,7 @@
 
     <ul>
         {% for entry in suggestion %}
-            <li> <a href = "{% url 'entry' title=entry %}" >{{ entry }} </a></li>
+            <li> <a href = "{% url 'encyclo:entry' title=entry %}" >{{ entry }} </a></li>
         {% endfor %}
     </ul>
 

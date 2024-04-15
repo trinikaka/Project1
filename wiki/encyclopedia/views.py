@@ -48,7 +48,17 @@ def search(request):
             return render(request, "encyclopedia/error.html", {
                 "message": "No results found for the search query: {}".format(entry_search)
 
-            })  
+            })
+
+         #else:
+            #allEntries = util.list_entries()
+            #suggestion = []
+            #for entry in allEntries:
+                #if entry_search.lower() in entry.lower():
+                    #suggestion.append(entry)
+            #return render(request, "encyclopedia/search.html", {
+               # "suggestion" : suggestion
+           # })     
 
 def new_page(request):
     if request.method== "GET":

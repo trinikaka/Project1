@@ -30,35 +30,24 @@ def entry(request, title):
             "content" : html_content
         } )
 
-def search(request):
-
+def search (request):
     if request.method == "POST":
-        entry_search = request.POST.get('s', '').strip() 
-        if not entry_search:
-            return render(request, "encyclopedia/error.html", {
-                "message": "Please enter a search query."
-            })
-        html_content = convert_md_to_html(entry_search)
+        entry_search = request.POST ['s']
+        html_content = convert_md_to_html (entry_search) 
         if html_content is not None:
-            return render(request, "encyclopedia/entry.html", {
-                "title": entry_search,
-                "content": html_content
+            return render (request, "encyclopedia/entry.html",{
+                "title" : entry_search,
+                "content" : html_content
             })
         else:
-            return render(request, "encyclopedia/error.html", {
-                "message": "No results found for the search query: {}".format(entry_search)
-
-            })
-
-         #else:
-            #allEntries = util.list_entries()
-            #suggestion = []
-            #for entry in allEntries:
-                #if entry_search.lower() in entry.lower():
-                    #suggestion.append(entry)
-            #return render(request, "encyclopedia/search.html", {
-               # "suggestion" : suggestion
-           # })     
+            allEntries = util.list_entries()
+            suggestion = []
+            for entry in allEntries:
+                if entry_search.lower() in entry.lower():
+                    suggestion.append(entry)
+            return render(request, "encyclopedia/search.html", {
+                "suggestion" : suggestion
+            })    
 
 def new_page(request):
     if request.method== "GET":

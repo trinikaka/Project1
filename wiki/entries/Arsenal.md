@@ -1,3 +1,51 @@
 #Arsenal
 
-Top of the EPL table
+
+
+
+
+Top of the EPL table 
+
+
+
+**6 games left** 
+
+
+
+####Pundits Chance
+
+
+
+Arsenal have a 30% chance of *winning* the league.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
